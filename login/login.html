@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900" style="font-family: Arial, Helvetica, sans-serif;">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full p-4 z-50 transition-all duration-300 bg-transparent" id="navbar" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <a href="#" class="text-lg font-bold">Software Engineer</a>
+            <button @click="open = !open" class="lg:hidden text-xl right-0 w-20">
+                ☰
+            </button>
+            <ul class="hidden lg:flex lg:space-x-1">
+                <li><a href="../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Home</a></li>
+                <li><a href="../about/about.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">About</a></li>
+                <li><a href="../news/news.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">News</a></li>
+                <li><a href="../gallery/gallery.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Gallery</a></li>
+                <li><a href="../contact/contact.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Contact</a></li>
+            </ul>
+        </div>
+        <div 
+            x-show="open" 
+            @click.away="open = false" 
+            x-transition:enter="transition transform duration-500 ease-out" 
+            x-transition:enter-start="translate-x-full" 
+            x-transition:enter-end="translate-x-0" 
+            x-transition:leave="transition transform duration-500 ease-in" 
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="translate-x-full" 
+            class="absolute top-full text-white right-0 w-30 lg:hidden p-2 rounded-lg">
+            <ul class="flex flex-col space-y-1">
+                <li><a href="../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Home</a></li>
+                <li><a href="../about/about.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">About</a></li>
+                <li><a href="../news/news.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">News</a></li>
+                <li><a href="../gallery/gallery.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Gallery</a></li>
+                <li><a href="../contact/contact.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="min-h-screen flex box-border justify-center items-center py-20 mb-40" x-data="loginRegister()">
+        <!-- Tabel Login -->
+        <div class="bg-white bg-opacity-10 rounded-2xl flex max-w-3xl p-5 items-center" 
+            x-show="!showRegister" 
+            x-transition:enter="transition ease-out duration-500" 
+            x-transition:enter-start="opacity-0 transform scale-90" 
+            x-transition:enter-end="opacity-100 transform scale-100" 
+            x-transition:leave="transition ease-in duration-500" 
+            x-transition:leave-start="opacity-100 transform scale-100" 
+            x-transition:leave-end="opacity-0 transform scale-90">
+            <div class="md:w-1/2 px-8">
+                <h2 class="font-bold text-3xl text-white">Login</h2>
+                <p class="text-sm mt-4 text-gray-200">If you already a member, easily log in now.</p>
+                <form action="" class="flex flex-col gap-4" id="loginForm">
+                    <input class="p-2 mt-8 rounded-xl border" type="email" name="email" placeholder="Email" required>
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password" required>
+                    </div>
+                    <button class="py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white hover:text-black duration-300 font-medium" type="submit">Login</button>
+                </form>
+                <div class="mt-6 items-center text-gray-100">
+                    <hr class="border-gray-300">
+                    <p class="text-center text-sm">OR</p>
+                    <hr class="border-gray-300">
+                </div>
+
+                <a href="../login/error.html">
+                    <button class="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="25px">
+                            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+                            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+                            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        </svg>
+                        Login with Google
+                    </button>
+                </a>
+
+                <div class="mt-6 py-4 text-gray-200 text-sm hover:underline border-b border-gray-300 playfair tooltip">
+                    <a href="error.html">
+                        Forget password?
+                    </a>
+                </div>
+                <div class="mt-4 text-sm flex justify-between items-center container-mr">
+                    <p class="mr-3 md:mr-0 text-gray-200">If you don't have an account...</p>
+                    <button class="hover:border register text-blue-500 hover:text-blue-700 rounded-xl py-0 px-1 duration-300" @click="toggleRegister()">Register</button>
+                </div>
+            </div>
+            <div class="md:block hidden w-1/2">
+                <img class="rounded-2xl max-h-[1600px]" src="../IMAGES/img-51.png" alt="login form image">
+            </div>
+        </div>
+
+        <!-- Registration Section -->
+        <div x-show="showRegister" class="bg-white bg-opacity-10 rounded-2xl flex max-w-3xl p-5 items-center mt-5"
+            x-transition:enter="transition ease-out duration-500" 
+            x-transition:enter-start="opacity-0 transform scale-90" 
+            x-transition:enter-end="opacity-100 transform scale-100" 
+            x-transition:leave="transition ease-in duration-500" 
+            x-transition:leave-start="opacity-100 transform scale-100" 
+            x-transition:leave-end="opacity-0 transform scale-90">
+            <div class="md:w-1/2 px-8">
+                <div class="text-left mb-1">
+                    <h2 class="font-bold text-3xl text-white">Register</h2>
+                    <p class="text-sm mt-3 text-gray-200">Create a new account.</p>
+                </div>
+                <form action="" class="flex flex-col gap-4 mb-5" id="registerForm">
+                    <input class="p-2 mt-8 rounded-xl border" type="text" name="username" placeholder="Username" required>
+                    <input class="p-2 rounded-xl border" type="email" name="email" placeholder="Email" required>
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" type="password" name="password" id="registerPassword" placeholder="Password" required>
+                    </div>
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" type="password" name="password" id="registerPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="mt-10">
+                        <button class="py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white hover:text-black duration-300 font-medium w-full" type="submit">Register</button>
+                    </div>
+                    <hr class="border-gray-200 my-3">
+                </form>
+                <div class="text-sm flex justify-between items-center container-mr">
+                    <p class="mr-3 md:mr-0 text-gray-200">If you already have an account...</p>
+                    <button class="hover:border register text-blue-500 hover:text-blue-700 rounded-xl py-0 px-1 duration-300" @click="toggleRegister()">Login</button>
+                </div>
+            </div>
+            <div class="md:block hidden w-1/2">
+                <img class="rounded-2xl max-h-[1600px]" src="../IMAGES/img-51.png" alt="registration form image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-300 pt-4 pb-6">
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 81px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <!-- Contact Section -->
+                <div class="w-full lg:w-6/12 px-4 mb-6 lg:mb-0">
+                    <h4 class="text-3xl font-semibold text-center lg:text-left">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700 text-center lg:text-left">
+                        Find us on any of these platforms, we respond within 1-2 business days.
+                    </h5>
+                    <div class="mt-6 flex justify-center lg:justify-start">
+                        <a href="https://www.youtube.com/@Sngklem" target="_blank" class="bg-white text-red-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sngklem._/" target="_blank" class="bg-white text-pink-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100028173499288" target="_blank" class="bg-white text-blue-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Resources Section -->
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap justify-center lg:justify-end">
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../about/about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../news/news.html">News</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../contact/contact.html">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../login/login.html">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Section -->
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center justify-center md:justify-center">
+                <div class="w-full md:w-4/12 px-4 text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Copyright &copy; 202 4 Fruq 2121400055. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <script src="../login/js/app.js"></script>
+</body>
+</html>

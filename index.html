@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Web Programming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900" style="font-family: Arial, Helvetica, sans-serif;">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full p-4 z-50 transition-all duration-300 bg-transparent" id="navbar" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <a href="#" class="text-lg font-bold">Software Engineer</a>
+            <button @click="open = !open" class="lg:hidden text-xl right-0 w-20">
+                ☰
+            </button>
+            <ul class="hidden lg:flex lg:space-x-1">
+                <li><a href="about/about.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">About</a></li>
+                <li><a href="news/news.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">News</a></li>
+                <li><a href="gallery/gallery.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Gallery</a></li>
+                <li><a href="contact/contact.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Contact</a></li>
+                <li><a href="login/login.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Login</a></li>
+            </ul>
+        </div>
+        <div 
+            x-show="open" 
+            @click.away="open = false" 
+            x-transition:enter="transition transform duration-500 ease-out" 
+            x-transition:enter-start="translate-x-full" 
+            x-transition:enter-end="translate-x-0" 
+            x-transition:leave="transition transform duration-500 ease-in" 
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="translate-x-full" 
+            class="absolute top-full text-white right-0 w-30 lg:hidden p-2 rounded-lg">
+            <ul class="flex flex-col space-y-1">
+                <li><a href="about/about.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">About</a></li>
+                <li><a href="news/news.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">News</a></li>
+                <li><a href="gallery/gallery.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Gallery</a></li>
+                <li><a href="contact/contact.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Contact</a></li>
+                <li><a href="login/login.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('IMAGES/bg-11.png');">
+        <h1 class="text-4xl font-bold">Welcome to this website</h1>
+    </section>
+
+    <!-- Card Section -->
+    <section id="services" class="container mx-auto py-20 mb-20">
+        <h2 class="text-2xl font-bold text-white text-center mb-11">Our Services</h2>
+        <div class="grid text-white grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Card 1 -->
+            <div class="p-5 m-5 rounded shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-gray-600 hover:bg-opacity-20">
+                <img src="IMAGES/img-121.png" alt="Web Development" class="w-full h-40 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                <p class="mb-9 text-gray-400">Kami menawarkan solusi pengembangan web responsif yang disesuaikan dengan kebutuhan Anda.</p>
+                <a href="home/learn more/development.html">
+                    <button class="w-90 py-2 px-4 bg-gray-800 text-white text-xs rounded transition duration-300 hover:bg-opacity-70">Learn More</button>
+                </a>
+            </div>
+            <!-- Card 2 -->
+            <div class="p-5 m-5 rounded shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl bg-gray-600 hover:bg-opacity-20">
+                <img src="IMAGES/img-124.png" alt="Web Designer" class="w-full h-40 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold mb-3">Web Designer</h3>
+                <p class="mb-9 text-gray-400">Menciptakan pengalaman pengguna yang menarik dan fungsional melalui desain antarmuka yang inovatif.</p>
+                <a href="home/learn more/designer.html">
+                    <button class="w-90 py-2 px-4 bg-gray-800 text-white text-xs rounded transition duration-300 hover:bg-gray-700">Learn More</button>
+                </a>
+            </div>
+            <!-- Card 3 -->
+            <div class="p-5 m-5 rounded shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl bg-gray-600 hover:bg-opacity-20">
+                <img src="IMAGES/img-122.png" alt="Data Analysis" class="w-full h-40 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold mb-3">Data Analysis</h3>
+                <p class="mb-9 text-gray-400">Layanan analisis data untuk mendukung pengambilan keputusan berbasis data.</p>
+                <a href="home/learn more/analysis.html">
+                    <button class="w-90 py-2 px-4 bg-gray-800 text-white text-xs rounded transition duration-300 hover:bg-gray-700">Learn More</button>
+                </a>
+            </div>
+            <!-- Card 4 -->
+            <div class="p-5 m-5 rounded shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl bg-gray-600 hover:bg-opacity-20">
+                <img src="IMAGES/img-123.png" alt="Cybersecurity" class="w-full h-40 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold mb-3">Cybersecurity</h3>
+                <p class="mb-9 text-gray-400">Melindungi sistem dan data Anda dari ancaman digital dengan teknologi terbaru.</p>
+                <a href="home/learn more/cyber.html">
+                    <button class="w-90 py-2 px-4 bg-gray-800 text-white text-xs rounded transition duration-300 hover:bg-gray-700">Learn More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-300 pt-4 pb-6">
+        <!-- Decorative SVG -->
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 81px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <!-- Contact Section -->
+                <div class="w-full lg:w-6/12 px-4 mb-6 lg:mb-0">
+                    <h4 class="text-3xl font-semibold text-center lg:text-left">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700 text-center lg:text-left">
+                        Find us on any of these platforms, we respond within 1-2 business days.
+                    </h5>
+                    <div class="mt-6 flex justify-center lg:justify-start">
+                        <!-- Social Media Icons -->
+                        <a href="https://www.youtube.com/@Sngklem" target="_blank" class="bg-white text-red-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sngklem._/" target="_blank" class="bg-white text-pink-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100028173499288" target="_blank" class="bg-white text-blue-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Resources Section -->
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap justify-center lg:justify-end">
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="about/about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="news/news.html">News</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="contact/contact.html">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="login/login.html">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Section -->
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center justify-center md:justify-center">
+                <div class="w-full md:w-4/12 px-4 text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Copyright &copy; 2024 Fruq 2121400055. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <script src="home/js/app.js"></script>
+</body>
+</html>

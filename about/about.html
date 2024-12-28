@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900" style="font-family: Arial, Helvetica, sans-serif;">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full p-4 z-50 transition-all duration-300 bg-transparent" id="navbar" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center text-white">
+            <a href="#" class="text-lg font-bold">Software Engineer</a>
+            <button @click="open = !open" class="lg:hidden text-xl right-0 w-20">
+                ☰
+            </button>
+            <ul class="hidden lg:flex lg:space-x-1">
+                <li><a href="../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Home</a></li>
+                <li><a href="../news/news.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">News</a></li>
+                <li><a href="../gallery/gallery.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Gallery</a></li>
+                <li><a href="../contact/contact.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Contact</a></li>
+                <li><a href="../login/login.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Login</a></li>
+            </ul>
+        </div>
+        <div 
+            x-show="open" 
+            @click.away="open = false" 
+            x-transition:enter="transition transform duration-500 ease-out" 
+            x-transition:enter-start="translate-x-full" 
+            x-transition:enter-end="translate-x-0" 
+            x-transition:leave="transition transform duration-500 ease-in" 
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="translate-x-full" 
+            class="absolute top-full text-white right-0 w-30 lg:hidden p-2 rounded-lg">
+            <ul class="flex flex-col space-y-1">
+                <li><a href="../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Home</a></li>
+                <li><a href="../news/news.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">News</a></li>
+                <li><a href="../gallery/gallery.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Gallery</a></li>
+                <li><a href="../contact/contact.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Contact</a></li>
+                <li><a href="../login/login.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-80 hover:bg-gray-800">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('../IMAGES/bg-21.png');">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white">Our Company</h2>
+            <p class="text-white mt-4">Pelajari lebih lanjut tentang misi, visi, dan nilai-nilai kami.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="container mx-auto py-20 px-7 mt-8">
+        <div class="grid gap-12 md:grid-cols-2 items-start">
+            <div>
+                <h3 class="text-2xl font-bold text-white">What is Software Engineering</h3>
+                <p class="text-gray-400 mt-4">
+                    Software engineering adalah proses sistematis dalam merancang, mengembangkan, menguji, dan memelihara perangkat lunak,
+                    dengan tujuan menciptakan produk yang berkualitas, dan mudah untuk dipelihara. <br><br>
+                    Dilansir dari Geeks for Geeks, pendekatan ini melibatkan berbagai hal. Mulai dari teknik, alat, dan metodologi yang
+                    digunakan untuk meningkatkan efisiensi waktu dan anggaran dalam pengembangan perangkat lunak. <br><br>
+                    Sebagai disiplin ilmu yang terus berkembang, software engineering menggabungkan ilmu komputer dengan pemecahan masalah
+                    strategis menggunakan prinsip-prinsip engineering. Serta, memanfaatkan kemajuan teknologi dan bahasa pemrograman.
+                </p>
+            </div>
+            <div>
+                <img src="../IMAGES/img-221.png" alt="Our Mission" class="rounded shadow-lg">
+            </div>
+        </div>
+        
+        <div class="grid gap-12 md:grid-cols-2 items-start mt-20">
+            <div class="order-2 md:order-1">
+                <img src="../IMAGES/img-222.png" alt="Our Vision" class="rounded shadow-lg">
+            </div>
+            <div class="order-1 md:order-2">
+                <h3 class="text-2xl font-bold text-white">The Purpose of Software Engineering</h3>
+                <p class="text-gray-400 mt-4">
+                    Berikut adalah beberapa tujuan utama dalam bidang software engineering, yang merupakan fokus utama dari pengembangan perangkat lunak:
+                </p>
+                <ul class="list-disc m-2 pl-5 text-gray-400">
+                    <li class="p-2">Meningkatkan kinerja operasional perangkat lunak dengan memanfaatkan komputasi yang lebih efisien dan efektif.</li>
+                    <li class="p-2">Software dapat menentukan kriteria pengujian dan mengevaluasi perangkat lunak sesuai dengan standar yang telah ditetapkan.</li>
+                    <li class="p-2">Memungkinkan penggunaan perangkat lunak untuk mengoperasikan sistem sesuai dengan preferensi dan kebutuhan pengguna.</li>
+                    <li class="p-2">Memberikan fungsionalitas tambahan kepada unit fungsional untuk dapat memproses data secara simultan atau secara bersamaan.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid gap-12 md:grid-cols-2 items-start mt-20">
+            <div>
+                <h3 class="text-2xl font-bold text-white">Software Engineering Career Path</h3>
+                <p class="text-gray-400 mt-4 mb-2">
+                    Apabila Anda yang merupakan seorang lulusan dari jurusan software engineering, maka Anda dapat memiliki kesempatan emas untuk berkembang dalam menjajaki karir. <br><br>
+                    Software engineering adalah jenis profesi yang bisa dibilang sangat menjanjikan, mengingat profesi ini berhubungan dengan teknologi yang berkembang saat ini. <br><br>
+                    Oleh karena itu, berikut adalah jenjang karir ketika Anda terjun dalam profesi software engineering: <br><br>
+                </p>
+                <ul class="list-disc m-1 pl-5 text-gray-400">
+                    <li class="p-1">Junior Software Engineer</li>
+                    <li class="p-1">Software Engineer</li>
+                    <li class="p-1">Senior Software Engineer</li>
+                    <li class="p-1">Architect Principal Software Engineer</li>
+                </ul>
+            </div>
+            <div>
+                <img src="../IMAGES/img-223.png" alt="Our Mission" class="rounded shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Section -->
+    <section class="py-20 mb-20">
+        <div class="container mx-auto text-center mb-12 px-9">
+            <h2 class="text-3xl font-bold text-white">Meet Our Team</h2>
+            <p class="text-gray-400 mt-4">Individu yang bersemangat di balik kesuksesan kami.</p>
+        </div>
+        <div class="container text-left mx-auto grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-6">
+            <!-- Card 1 -->
+            <div class="text-white p-5">
+                <div class="overflow-hidden">
+                    <img src="../IMAGES/img-231.png" alt="Team Member" class="mx-auto object-cover w-full h-[300px] sm:h-[375px]">
+                </div>
+                <h3 class="text-xl font-bold mt-4">Umar Faruq</h3>
+                <p class="text-xs text-gray-500">Web Founder</p>
+                <p class="text-sm mt-6 text-gray-300">The role of a Founder in website development is pivotal, as they are responsible for establishing
+                the project's vision, goals, and overall direction. They collaborate with stakeholders to identify the target audience
+                and define the website's purpose and objectives. The Founder also ensures that the team has the necessary resources,
+                including skilled developers, designers, and tools, to achieve the project's milestones.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="text-white p-5">
+                <div class="overflow-hidden">
+                    <img src="../IMAGES/img-232.png" alt="Team Member" class="mx-auto object-cover w-full h-[300px] sm:h-[375px]">
+                </div>
+                <h3 class="text-xl font-bold mt-4">Moh. Ainol Yaqin, M.Kom</h3>
+                <p class="text-xs text-gray-500">CEO</p>
+                <p class="text-sm mt-6 text-gray-300">The CEO plays a pivotal role in website development by providing strategic vision and leadership
+                to ensure the project aligns with the company's overall goals. They oversee the planning process, defining clear objectives
+                and priorities for the website's functionality, design, and user experience. The CEO collaborates with stakeholders,
+                including developers, designers, and marketing teams, to ensure alignment and resource allocation.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="text-white p-5">
+                <div class="overflow-hidden">
+                    <img src="../IMAGES/img-233.png" alt="Team Member" class="mx-auto object-cover w-full h-[300px] sm:h-[375px]">
+                </div>
+                <h3 class="text-xl font-bold mt-4">James Kennedy</h3>
+                <p class="text-xs text-gray-500">Assistant Founder</p>
+                <p class="text-sm mt-6 text-gray-300">As an assistant in the development of a website, your responsibilities would include supporting the
+                team with a variety of tasks, such as conducting research on design trends, helping with content creation and editing,
+                and ensuring that website elements are optimized for performance and user experience. You would also assist with front-end development tasks,
+                including writing and testing HTML, CSS, and JavaScript code, and ensuring that the website is responsive across different devices.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-300 pt-4 pb-6">
+        <!-- Decorative SVG -->
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 81px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <!-- Contact Section -->
+                <div class="w-full lg:w-6/12 px-4 mb-6 lg:mb-0">
+                    <h4 class="text-3xl font-semibold text-center lg:text-left">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700 text-center lg:text-left">
+                        Find us on any of these platforms, we respond within 1-2 business days.
+                    </h5>
+                    <div class="mt-6 flex justify-center lg:justify-start">
+                        <!-- Social Media Icons -->
+                        <a href="https://www.youtube.com/@Sngklem" target="_blank" class="bg-white text-red-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sngklem._/" target="_blank" class="bg-white text-pink-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100028173499288" target="_blank" class="bg-white text-blue-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Resources Section -->
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap justify-center lg:justify-end">
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../about/about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../news/news.html">News</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../contact/contact.html">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../login/login.html">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Section -->
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center justify-center md:justify-center">
+                <div class="w-full md:w-4/12 px-4 text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Copyright &copy; 2024 Fruq 2121400055. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <script src="../about/js/app.js"></script>
+</body>
+</html>

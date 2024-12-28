@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full p-4 z-50 transition-all duration-300 bg-transparent text-gray-200" id="navbar" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-lg font-bold">Web Development</a>
+            <a href="../../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-50 hover:bg-gray-800">Back</a>
+        </div>
+        <div x-show="open" @click.away="open = false" class="absolute top-full right-0 w-24 bg-transparent lg:hidden p-2">
+            <a href="../../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-50 hover:bg-gray-800">Back</a>
+        </div>
+    </nav>
+    
+    <!-- Description Section -->
+    <div x-data="{ cartOpen: false , isOpen: false }">
+        <main class="my-20">
+            <div class="container mx-auto px-6">
+                <div class="h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=144')">
+                    <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
+                        <div class="px-10 max-w-xl">
+                            <h2 class="text-2xl text-white font-semibold">Sport Shoes</h2>
+                            <p class="mt-2 text-gray-300">Discover the latest trends and events in the world of sports, from thrilling matches to athlete highlights.</p>
+                            <button class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                <a href="https://www.free-css.com/template-categories/sport"><span>show Now</span></a>
+                                <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex mt-8 md:-mx-4">
+                    <div class="w-full h-64 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2" style="background-image: url('https://www.deutschland.de/sites/default/files/media/image/tdt_27032023_industrie_facts.jpg')">
+                        <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
+                            <div class="px-10 max-w-xl">
+                                <h2 class="text-2xl text-white font-semibold">Industrial</h2>
+                                <p class="mt-2 text-gray-300">The industrial sector encompasses a wide range of activities related to the production of goods and services.</p>
+                                <button class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
+                                    <a href="https://uicookies.com/free-industrial-website-templates/"><span>Show Now</span></a>
+                                    <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2" style="background-image: url('https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+                        <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
+                            <div class="px-10 max-w-xl">
+                                <h2 class="text-2xl text-white font-semibold">Games</h2>
+                                <p class="mt-2 text-gray-300">Games provide entertainment and challenge, engaging players in immersive experiences. From video games to board games, there's something for everyone to enjoy.</p>
+                                <button class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
+                                    <a href="https://www.toocss.com/free-gaming-website-templates/"><span>Show Now</span></a>
+                                    <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Games -->
+                <div class="mt-16">
+                    <h4 class="text-white text-2xl font-medium">Tamplate Website</h4>
+                    <h1 class="text-gray-500 text-xm font-medium">Gamers</h1>
+                    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6 text-white">
+                        <!-- Card 1 -->
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.toocss.com/wp-content/uploads/2022/11/Cyborg-Gaming.jpg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Cyborg</h3>
+                                <span class="mt-2">$57</span>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.toocss.com/wp-content/uploads/2021/10/anime-toocss.jpg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Dragon Slayer</h3>
+                                <span class="mt-2">$102</span>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.toocss.com/wp-content/uploads/2020/02/gamingstore-toocss.jpg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Gaming Store</h3>
+                                <span class="mt-2">$89</span>
+                            </div>
+                        </div>
+                        <!-- Card  4 -->
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.toocss.com/wp-content/uploads/2019/11/jackpiro-toocss.jpg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Jackpiro</h3>
+                                <span class="mt-2">$45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Sport Shoes -->
+                <div class="mt-16">
+                    <h4 class="text-white text-2xl font-medium">Tamplate Website</h4>
+                    <h1 class="text-gray-500 text-xm font-medium">Sport Shoes</h1>
+                    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6 text-white">
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://html.design/wp-content/uploads/2020/09/neogym-758x948.jpg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Neogym</h3>
+                                <span class="mt-2">$99</span>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://html.design/wp-content/uploads/2020/10/oxer-600x800.jpg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Boxer Center</h3>
+                                <span class="mt-2">$102</span>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://th.bing.com/th/id/OIP.QoVFTP_jsOduYRLd9O2WKwAAAA?rs=1&pid=ImgDetMain')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">Energym </h3>
+                                <span class="mt-2">$118</span>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden bg-gray-800">
+                            <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('https://plantillashtmlgratis.com/wp-content/uploads/2019/images/page228/stamina.jpeg')">
+                                <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                    <a href="error.html">
+                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="px-5 py-3">
+                                <h3 class="uppercase">GYMSTER </h3>
+                                <span class="mt-2">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-300 pt-4 pb-6">
+        <!-- Decorative SVG -->
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 81px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <!-- Contact Section -->
+                <div class="w-full lg:w-6/12 px-4 mb-6 lg:mb-0">
+                    <h4 class="text-3xl font-semibold text-center lg:text-left">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700 text-center lg:text-left">
+                        Find us on any of these platforms, we respond within 1-2 business days.
+                    </h5>
+                    <div class="mt-6 flex justify-center lg:justify-start">
+                        <!-- Social Media Icons -->
+                        <a href="https://www.youtube.com/@Sngklem" target="_blank" class="bg-white text-red-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sngklem._/" target="_blank" class="bg-white text-pink-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100028173499288" target="_blank" class="bg-white text-blue-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Resources Section -->
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap justify-center lg:justify-end">
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../about/about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../news/news.html">News</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../contact/contact.html">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../login/login.html">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Section -->
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center justify-center md:justify-center">
+                <div class="w-full md:w-4/12 px-4 text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Copyright &copy; 2024 Fruq 2121400055. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900" style="font-family: Arial, Helvetica, sans-serif;">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full p-4 z-50 transition-all duration-300 bg-transparent text-white" id="navbar" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-lg font-bold">Cyber Security</a>
+            <a href="../../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-50 hover:bg-gray-800">Back</a>
+        </div>
+        <div x-show="open" @click.away="open = false" class="absolute top-full right-0 w-24 bg-transparent lg:hidden p-2">
+            <a href="../../index.html" class="block py-1 px-3 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-opacity-50 hover:bg-gray-800">Back</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-64 bg-cover bg-center flex items-center justify-center" style="background-image: url('https://software.ipd.com.au/images/banner.jpg');">
+        <h1 class="text-3xl font-bold text-white shadow-xl">Cybersecurity Services</h1>
+    </header>
+    
+    <!-- Content Section -->
+    <main class="container mx-auto py-10 text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 m-7">
+            <!-- Main Content -->
+            <section>
+                <section class="mb-10">
+                    <h2 class="text-2xl font-bold mb-4">Why Choose Our Cybersecurity Services?</h2>
+                    <p class="leading-relaxed text-gray-500 mb-4">
+                        Di dunia yang semakin terhubung, ancaman terhadap aset digital organisasi Anda semakin canggih dan meluas. Penjahat siber menggunakan taktik yang maju untuk mengeksploitasi kerentanan, menempatkan data sensitif dalam risiko dan berpotensi menyebabkan kerugian finansial dan reputasi yang menghancurkan. Layanan keamanan siber kami dirancang secara teliti untuk melawan ancaman ini, memastikan bahwa organisasi Anda dilindungi dari serangan dan informasi penting Anda tetap aman.
+                    </p>
+                    <p class="leading-relaxed text-gray-500 mb-4">
+                        Kami mengadopsi strategi keamanan yang komprehensif dan berlapis-lapis yang mengintegrasikan teknologi mutakhir, termasuk kecerdasan buatan dan pembelajaran mesin. Teknologi ini memungkinkan kami untuk memantau sistem Anda secara real-time, dengan cepat mendeteksi dan menetralkan ancaman sebelum mereka dapat menyebabkan kerusakan. Tim ahli kami melakukan penilaian risiko dan pemindaian kerentanan secara berkala, mengidentifikasi kelemahan dalam infrastruktur Anda dan menerapkan solusi yang disesuaikan untuk memperkuat pertahanan Anda.
+                    </p>
+                    <p class="leading-relaxed text-gray-500 mb-4">
+                        Menyadari bahwa teknologi saja tidak dapat melindungi organisasi Anda, kami menekankan pentingnya faktor manusia dalam keamanan siber. Program pelatihan kami dirancang khusus untuk meningkatkan kesadaran karyawan Anda terhadap potensi ancaman, seperti serangan phishing dan taktik rekayasa sosial. Dengan membudayakan kesadaran keamanan, kami memberdayakan tim Anda untuk bertindak sebagai garis pertahanan pertama, secara signifikan mengurangi kemungkinan pelanggaran yang disebabkan oleh kesalahan manusia.
+                    </p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-xl font-semibold mb-4">Key Features</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-500">
+                        <li>Real-time threat detection and incident response to mitigate risks promptly.</li>
+                        <li>Deteksi ancaman secara real-time dan respons insiden untuk mengurangi risiko dengan cepat.</li>
+                        <li>Penilaian kerentanan yang komprehensif untuk mengidentifikasi dan memperbaiki kelemahan dalam sistem Anda.</li>
+                        <li>Solusi firewall dan enkripsi yang canggih untuk melindungi jaringan dan data Anda.</li>
+                        <li>Pelatihan keamanan siber untuk karyawan untuk meningkatkan kesadaran dan mengurangi kesalahan manusia.</li>
+                        <li>Pemantauan dan dukungan 24/7 untuk memastikan perlindungan terus-menerus dan waktu respons yang cepat.</li>
+                        <li>Audit keamanan dan pemeriksaan kepatuhan secara berkala untuk memastikan kepatuhan terhadap standar industri.</li>
+                        <li>Perencanaan respons insiden untuk mempersiapkan organisasi Anda menghadapi potensi pelanggaran.</li>
+                        <li>Integrasi intelijen ancaman untuk tetap berada di depan ancaman siber yang muncul.</li>
+                        <li>Solusi keamanan yang disesuaikan untuk memenuhi kebutuhan spesifik bisnis Anda.</li>
+                        <li>Langkah-langkah keamanan cloud untuk melindungi data yang disimpan di lingkungan cloud.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-xl font-semibold mb-4">Get Started</h2>
+                    <p class="mb-4 text-gray-500">Jangan menunggu serangan siber terjadi. Ambil langkah proaktif untuk mengamankan aset digital Anda. Hubungi kami hari ini untuk mempelajari lebih lanjut tentang solusi keamanan siber kami yang disesuaikan untuk memenuhi kebutuhan unik bisnis Anda.</p>
+                    <a href="../../contact/contact.html" class="inline-block py-1 px-3 bg-indigo-700 rounded transform transition duration-300 hover:scale-105 hover:bg-indigo-900">Contact Us</a>
+                </section>
+            </section>
+
+            <div class="grid gap-7 ml-40">
+                <!-- Article 1 -->
+                <div class="bg-gradient-to-t from-gray-800 to-gray-600 shadow-lg rounded-lg overflow-hidden p-3">
+                    <div class="transform transition duration-300 hover:scale-105">
+                        <img src="https://www.afritechmedia.com/wp-content/uploads/2023/12/Adaptive-Security-Measures-Fortifying-Defenses-Against-Evolving-Cyber-Threats.jpg" alt="Article Image" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold mb-3">Understanding Cybersecurity Threats</h2>
+                            <p class="text-gray-500 mb-7">Ancaman dapat datang dalam berbagai bentuk, termasuk malware, phishing, dan ransomware. Memahami ancaman ini adalah langkah pertama dalam melindungi organisasi Anda...</p>
+                            <a href="https://medium.com/@digital.review/understanding-cybersecurity-threats" target="_blank" class="text-blue-600 hover:underline">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="bg-gradient-to-t from-gray-800 to-gray-600 shadow-lg rounded-lg overflow-hidden p-3">
+                    <div class="transform transition duration-300 hover:scale-105">
+                        <img src="https://res.cloudinary.com/m247/image/upload/s--9BZAQELo--/c_fill,f_auto,fl_any_format,g_auto,q_auto:eco,w_800/v1/wp/2024/05/10-cyber-hygiebe-best-practices.jpeg" alt="Article Image" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold mb-3">Best Practices for Cyber Hygiene</h2>
+                            <p class="text-gray-500 mb-7">Menjaga kebersihan dunia maya yang baik sangat penting untuk melindungi informasi Anda. Ini termasuk pembaruan perangkat lunak rutin, kebijakan kata sandi yang kuat, dan pelatihan karyawan...</p>
+                            <a href="https://medium.com/@digital.review/best-practices-for-cyber-hygiene" target="_blank" class="text-blue-600 hover:underline">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <div class="bg-gradient-to-t from-gray-800 to-gray-600 shadow-lg rounded-lg overflow-hidden p-3 mb-20">
+                    <div class="transform transition duration-300 hover:scale-105">
+                        <img src="https://s3.us-east-1.amazonaws.com/media.startchurch.com/blog/posts/img/12_08_20.jpg" alt="Article Image" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold mb-3">The Importance of Incident Response Plans</h2>
+                            <p class="text-gray-500 mb-7">Memiliki rencana respons insiden yang kuat sangat penting untuk meminimalkan kerusakan selama insiden siber. Rencana ini menguraikan langkah-langkah yang harus diambil ketika pelanggaran terjadi, memastikan respons yang cepat dan efektif...</p>
+                            <a href="https://medium.com/@digital.review/the-importance-of-incident-response-plans" target="_blank" class="text-blue-600 hover:underline">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-300 pt-4 pb-6">
+        <!-- Decorative SVG -->
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 81px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <!-- Contact Section -->
+                <div class="w-full lg:w-6/12 px-4 mb-6 lg:mb-0">
+                    <h4 class="text-3xl font-semibold text-center lg:text-left">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700 text-center lg:text-left">
+                        Find us on any of these platforms, we respond within 1-2 business days.
+                    </h5>
+                    <div class="mt-6 flex justify-center lg:justify-start">
+                        <!-- Social Media Icons -->
+                        <a href="https://www.youtube.com/@Sngklem" target="_blank" class="bg-white text-red-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sngklem._/" target="_blank" class="bg-white text-pink-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100028173499288" target="_blank" class="bg-white text-blue-500 shadow-lg h-10 w-10 flex items-center justify-center rounded-full transform transition duration-300 hover:scale-110 mr-2">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Resources Section -->
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap justify-center lg:justify-end">
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../about/about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../news/news.html">News</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../contact/contact.html">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="../../login/login.html">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom Section -->
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center justify-center md:justify-center">
+                <div class="w-full md:w-4/12 px-4 text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Copyright &copy; 2024 Fruq 2121400055. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
