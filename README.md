@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-Check out the live demo of the website here: _[Website Portfolio](https://osengg.github.io/Website-Portofolio.UNIVERSITY/)._
+Check out the live demo of the website here: _[Website Portfolio](https://osengg.github.io/Website-Portofolio.UNIVERSITY/)._ <br>
 This link takes you to the published version of my Website hosted on GitHub Pages. Explore the pages, interact with the gallery, and see my work in action!
 
 ## Features
@@ -56,7 +56,7 @@ If you want to contribute, feel free to fork this repository and create a pull r
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 <br>
 <br>
