@@ -1,31 +1,64 @@
-👋 Hi, I’m @Sngklem  
-🌟 Aspiring Software Engineer with a passion for coding and problem-solving!  
+# Website Portfolio - UNIVERSITY
 
-👀 Interests:  
-- Web Development 🌐  
-- Artificial Intelligence 🤖  
-- Open-Source Projects 🚀  
-- Exploring new technologies 🛠️  
+## About This Project
 
-🌱 Currently Learning:  
-- Advanced JavaScript and TypeScript  
-- PHP and Python  
-- Building scalable backend systems with Node.js  
-- Machine Learning fundamentals   
+**Website Portfolio - UNIVERSITY** is a personal portfolio website showcasing projects, skills, and experiences. It serves as an online resume and a platform for sharing knowledge and achievements.
 
-📫 How to Reach Me:  
-- Email: [faruq110803@gmail.com](mailto:faruq110803@gmail.com)  
-- YouTube: [@Sngklem](https://www.youtube.com/@Sngklem)  
+## Live Demo
 
-😄 Nickname:  
-Oseng/Ruk
+Check out the live demo of the website here: _[Website Portfolio](https://osengg.github.io/Website-Portofolio.UNIVERSITY/)._
+This link takes you to the published version of my Website hosted on GitHub Pages. Explore the pages, interact with the gallery, and see my work in action!
 
-⚡ Fun Fact:  
-I can code for hours as long as there’s a plate of fried rice 🍳, a hot cup of coffee ☕, and a cigarette 🚬 to spark my creativity.  
+## Features
 
----  
-✨ This repository is special because it reflects my journey in tech. Feel free to explore, fork, or star it if you find something inspiring!  
+- ✅ Fully responsive design
+- ✅ Portfolio showcase
+- ✅ Contact form
+- ✅ Image gallery
+- ✅ News and updates section
+- ✅ Secure login system
 
-DIHARAPKAN TERHUBUNG JARINGAN INTERNET UNTUK PENGALAMAN YANG MAKSIMAL.
+## Project Structure
 
-Create By: Oseng (2121400055) (Informatika)
+```bash
+Website-Portofolio.UNIVERSITY/
+│── IMAGES/              # Images used in the website
+│── about/               # About page
+│── contact/             # Contact page
+│── gallery/             # Gallery page
+│── home/                # Home page
+│── login/               # Login page
+│── news/                # News section
+│── index.html           # Main entry point
+│── SECURITY.md          # Security guidelines
+│── README.md            # Project documentation
+```
+
+## How to Run
+
+1. Clone this repository:
+
+   ```sh
+   git clone https://github.com/Osengg/Website-Portofolio.UNIVERSITY.git
+   ```
+
+2. Open `index.html` in your browser.
+
+## Technologies Used
+
+- **HTML**  
+- **CSS**  
+- **JavaScript**
+
+## Contribution
+
+If you want to contribute, feel free to fork this repository and create a pull request with your improvements.
+
+## License
+
+This project is licensed under the MIT License.
+
+<br>
+<br>
+
+**Upload:** _Dec 28, 2024_
