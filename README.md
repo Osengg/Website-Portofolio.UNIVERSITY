@@ -56,7 +56,7 @@ If you want to contribute, feel free to fork this repository and create a pull r
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License]().
 
 <br>
 <br>
